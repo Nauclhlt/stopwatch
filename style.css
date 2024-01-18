@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.root {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgba(100, 100, 100, 0.2);
+    border-radius: 32px;
+
+    padding: 32px;
+}
+
+.time-label {
+    font-family: monospace;
+    font-size: 256px;
+    font-weight:40;
+    color: aqua;
+
+    text-align: center;
+    padding: 4px;
+    margin: 0;
+}
+
+.button-container {
+    margin-block: 32px;
+    margin-inline: auto;
+    height: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.control-button {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  /*padding-inline: 64px;*/
+  padding-block: 16px;
+  width: 128px;
+  margin-inline: 8px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.control-button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.control-button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.control-button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}

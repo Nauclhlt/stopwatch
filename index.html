@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ストップウォッチ</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <audio id="bellAudio" src="bell.mp3"></audio>
+
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="script.js"></script>
+        <div class="root">
+            <div class="container">
+                <h1 class="time-label" id="time-label">00:00</h1>
+                <div class="button-container">
+                    <button role="button" id="start-button" class="control-button" onclick="startButtonClicked()">開始</button>
+                    <button role="button" class="control-button" onclick="resetButtonClicked()">リセット</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
