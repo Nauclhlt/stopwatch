@@ -44,10 +44,14 @@ function onTimer()
         {
             elapsedTime++;
 
-            if (elapsedTime == 5 * 60)
+            if (elapsedTime == 6 * 60)
             {
                 playBell();
             }
+	    if (elapsedTime == 7 * 60)
+	    {
+		playDoubleBell();
+	    }
         }
     }
 
