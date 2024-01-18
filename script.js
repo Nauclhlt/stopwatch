@@ -1,6 +1,7 @@
 var elapsedTime = 0;
 var isPaused = false;
 var isStarted = false;
+var bellAudio;
 
 window.onload = function () {
     setInterval(onTimer, 1000);
@@ -8,6 +9,7 @@ window.onload = function () {
 
 function startButtonClicked()
 {
+    bellAudio = new Audio("bell.mp3");
     if (!isStarted)
     {
         isStarted = true;
@@ -54,8 +56,7 @@ function onTimer()
 
 function playBell()
 {
-    let audio = document.getElementById("bellAudio");
-    audio.play();
+    bellAudio.play();
 }
 
 function updateTimeLabel()
