@@ -44,7 +44,7 @@ function onTimer()
         {
             elapsedTime++;
 
-            if (elapsedTime == 3 * 60)
+            if (elapsedTime == 5 * 60)
             {
                 playBell();
             }
@@ -56,7 +56,18 @@ function onTimer()
 
 function playBell()
 {
+    bellAudio.currentTime = 0;
     bellAudio.play();
+}
+
+function playDoubleBell()
+{
+    bellAudio.currentTime = 0;
+    bellAudio.play();
+    setInterval(function() {
+	    bellAudio.currentTime = 0;
+	    bellAudio.play();
+    }, 1000 );
 }
 
 function updateTimeLabel()
