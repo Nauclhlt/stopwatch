@@ -72,10 +72,10 @@ function playDoubleBell()
 {
     bellAudio2.currentTime = 0;
     bellAudio2.play();
-    setInterval(function() {
+    setTimeout(function() {
 	    bellAudio3.currentTime = 0;
 	    bellAudio3.play();
-    }, 1000 );
+    }, 500 );
 }
 
 function updateTimeLabel()
