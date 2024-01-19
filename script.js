@@ -2,6 +2,8 @@ var elapsedTime = 0;
 var isPaused = false;
 var isStarted = false;
 var bellAudio;
+let bellAudio2;
+let bellAudio3;
 
 window.onload = function () {
     setInterval(onTimer, 1000);
@@ -10,6 +12,8 @@ window.onload = function () {
 function startButtonClicked()
 {
     bellAudio = new Audio("bell.mp3");
+    bellAudio2 = new Audio("bell.mp3");
+    bellAudio3 = new Audio("bell.mp3");
     if (!isStarted)
     {
         isStarted = true;
@@ -66,11 +70,11 @@ function playBell()
 
 function playDoubleBell()
 {
-    bellAudio.currentTime = 0;
-    bellAudio.play();
+    bellAudio2.currentTime = 0;
+    bellAudio2.play();
     setInterval(function() {
-	    bellAudio.currentTime = 0;
-	    bellAudio.play();
+	    bellAudio3.currentTime = 0;
+	    bellAudio3.play();
     }, 1000 );
 }
 
